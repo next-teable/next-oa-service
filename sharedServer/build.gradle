@@ -1,0 +1,13 @@
+dependencies {
+
+    compile project(':shared')
+    compile project(':model')
+    compile project(':repository')
+    compile project(':repositoryImpl')
+    compile project(':service')
+    compile project(':serviceImpl')
+    compile project(':rbac')
+    compile project(':rbacImpl')
+    compile project(':event')
+    compile project(':openapi')
+}

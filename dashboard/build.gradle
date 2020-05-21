@@ -1,0 +1,43 @@
+apply plugin: 'org.springframework.boot'
+
+
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-data-redis')
+    compile('org.springframework.boot:spring-boot-starter-data-mongodb')
+    compile('org.springframework.boot:spring-boot-starter-security')
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile('org.springframework.boot:spring-boot-devtools')
+
+
+    compile project(':shared')
+    compile project(':model')
+    compile project(':repository')
+    compile project(':repositoryImpl')
+    compile project(':service')
+    compile project(':serviceImpl')
+    compile project(':rbac')
+    compile project(':rbacImpl')
+    compile project(':event')
+    compile project(':openapi')
+    compile project(':sharedServer')
+    compile project(':projectServiceImpl')
+    compile project(':projectRestApi')
+    compile project(':webhook')
+
+}
+
+bootRun {
+    if (project.hasProperty("jvmArgs")) {
+        jvmArgs project.jvmArgs.split("\\s+")
+    }
+}
+

@@ -1,0 +1,8 @@
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-mail")
+
+    compile project(":shared")
+    compile project(':model')
+    compile project(':repository')
+    compile project(':service')
+}

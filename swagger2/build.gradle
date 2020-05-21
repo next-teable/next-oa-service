@@ -1,0 +1,41 @@
+apply plugin: 'org.springframework.boot'
+
+
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+}
+
+dependencies {
+
+	compile "io.swagger:swagger-annotations:1.5.21",
+			"io.springfox:springfox-swagger2:2.9.2",
+			"io.springfox:springfox-swagger-ui:2.9.2"
+
+
+	compile('org.springframework.boot:spring-boot-starter')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-data-redis')
+	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
+	compile('org.springframework.boot:spring-boot-starter-security')
+	compile("org.springframework.boot:spring-boot-starter-actuator")
+
+	compile project(':shared')
+	compile project(':model')
+	compile project(':repository')
+	compile project(':repositoryImpl')
+	compile project(':service')
+	compile project(':serviceImpl')
+	compile project(':rbac')
+	compile project(':rbacImpl')
+	compile project(':event')
+	compile project(':openapi')
+}
+
+bootRun {
+	if ( project.hasProperty('jvmArgs') ) {
+		jvmArgs project.jvmArgs.split('\\s+')
+	}
+}

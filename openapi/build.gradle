@@ -1,0 +1,9 @@
+dependencies {
+
+    compile project(':shared')
+    compile project(':model')
+    compile project(':service')
+    compile project(':rbac')
+    compile project(':rbacImpl')
+
+}

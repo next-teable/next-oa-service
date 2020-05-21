@@ -1,0 +1,47 @@
+apply plugin: 'org.springframework.boot'
+
+
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+}
+
+dependencies {
+
+    compile "in.clouthink.daas:daas-token:1.4.6",
+            "in.clouthink.daas:daas-we:2.1.1",
+            "in.clouthink.daas:daas-edm:1.0.2",
+            "in.clouthink.daas:daas-edm-email:1.0.0",
+            "in.clouthink.daas:daas-edm-sms:1.1.0",
+            "in.clouthink.daas:daas-fss-core:1.0.4",
+            "in.clouthink.daas:daas-fss-mongodb:1.0.2",
+            "in.clouthink.daas:daas-audit:1.0.2"
+
+    compile('org.springframework.boot:spring-boot-starter')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-data-redis')
+    compile('org.springframework.boot:spring-boot-starter-data-mongodb')
+    compile('org.springframework.boot:spring-boot-starter-security')
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+
+    compile project(':shared')
+    compile project(':model')
+    compile project(':repository')
+    compile project(':repositoryImpl')
+    compile project(':service')
+    compile project(':serviceImpl')
+    compile project(':rbac')
+    compile project(':rbacImpl')
+    compile project(':event')
+    compile project(':openapi')
+    compile project(':sharedServer')
+
+}
+
+bootRun {
+    if (project.hasProperty('jvmArgs')) {
+        jvmArgs project.jvmArgs.split('\\s+')
+    }
+}

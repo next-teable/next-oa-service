@@ -1,0 +1,71 @@
+version: '2.1'
+services:
+  broker:
+    container_name: webhookee-broker
+    image: melthaw/webhookee:broker
+    depends_on:
+      - mongodb
+      - rabbitmq
+    links:
+      - mongodb
+      - rabbitmq
+    ports:
+      - "80:80"
+    environment:
+      MONGODB_HOST: mongodb
+      MONGODB_PORT: 27017
+      MONGODB_DB: webhookee
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+      RABBITMQ_USERNAME: guest
+      RABBITMQ_PASSWORD: guest
+
+  dashboard:
+    container_name: webhookee-dashboard-proxy
+    image: melthaw/webhookee:dashboard-proxy
+    ports:
+      - "8080:80"
+    links:
+      - backend
+      - frontend
+    depends_on:
+      - backend
+      - frontend
+    volumes_from:
+      - frontend
+    environment:
+      HOST_NAME: localhost
+      BACKEND_ENDPOINT: http://backend
+
+  backend:
+    container_name: webhookee-dashboard-backend
+    image: melthaw/webhookee:dashboard-backend
+    links:
+       - mongodb
+    depends_on:
+       - mongodb
+    environment:
+      MONGODB_HOST: mongodb
+      MONGODB_PORT: 27017
+      MONGODB_DB: webhookee
+
+  frontend:
+    container_name: webhookee-dashboard-frontend
+    image: melthaw/webhookee:dashboard-frontend
+
+  rabbitmq:
+    container_name: webhookee-rabbitmq
+    image: rabbitmq:3-management
+    ports:
+      - "15672:15672"
+
+  mongodb:
+    container_name: webhookee-mongodb
+    image: mongo
+#    ports:
+#      - "27017:27017"
+    volumes:
+      - "webhookee_mongodb:/data/db"
+
+volumes:
+  webhookee_mongodb:

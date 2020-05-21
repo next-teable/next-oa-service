@@ -1,0 +1,9 @@
+dependencies {
+
+    compile project(':rbac')
+
+    compile project(':model')
+    compile project(':repository')
+    compile project(':service')
+
+}

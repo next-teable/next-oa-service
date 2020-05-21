@@ -1,0 +1,16 @@
+**/*.ipr
+**/*.iws
+**/*.iml
+**/.DS_Store
+**/.metadata
+**/bin/
+**/.classpath
+**/.project
+**/.settings/
+**/build/
+**/.gradle/
+**/.images/
+**/.idea/
+**/.log/
+**/log/
+**/node_modules/

@@ -1,0 +1,850 @@
+[
+  {
+    "virtual": true,
+    "type": "menu:portal",
+    "open": true,
+    "code": "portal",
+    "name": "门户",
+    "expression": "",
+    "patterns": [
+      "/api/portal**",
+      "/api/portal/**"
+    ],
+    "metadata": {
+      "icon": ""
+    },
+    "children": [
+      {
+        "code": "portal.index",
+        "type": "menu:portal",
+        "name": "首页",
+        "open": true,
+        "expression": "state:home.index",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "portal.notification",
+        "type": "menu:portal",
+        "name": "通知",
+        "open": true,
+        "expression": "state:notification.index",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "portal.news",
+        "type": "menu:portal",
+        "name": "新闻",
+        "open": true,
+        "expression": "state:news.index",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "portal.attachment",
+        "type": "menu:portal",
+        "name": "下载",
+        "open": true,
+        "expression": "state:attachment.index",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "contact",
+        "type": "menu:dashboard",
+        "name": "通讯录",
+        "open": true,
+        "expression": "state:dashboard.contacts.orgtree",
+        "patterns": [
+          "/api/contacts**",
+          "/api/contacts/**"
+        ],
+        "metadata": {
+          "icon": "fa fa-phone"
+        }
+      },
+      {
+        "code": "portal.dashboard",
+        "type": "menu:portal",
+        "name": "我的工作台",
+        "open": true,
+        "expression": "state:dashboard.paper.list({type:'notend'})",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      }
+    ]
+  },
+  {
+    "code": "my-portal",
+    "type": "menu:dashboard",
+    "name": "我的门户",
+    "open": true,
+    "expression": "state:home.index",
+    "patterns": [
+      "/api/portal**",
+      "/api/portal/**"
+    ],
+    "metadata": {
+      "icon": "fa fa-leaf"
+    }
+  },
+  {
+    "type": "menu:dashboard",
+    "virtual": true,
+    "open": true,
+    "code": "paper",
+    "name": "我的快文",
+    "expression": "",
+    "patterns": [
+      "/api/papers**",
+      "/api/papers/**"
+    ],
+    "metadata": {
+      "icon": "fa fa-road"
+    },
+    "children": [
+      {
+        "code": "paper.all",
+        "type": "menu:dashboard",
+        "open": true,
+        "name": "全部",
+        "expression": "state:dashboard.paper.list({type:'notend'})",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "paper.pending",
+        "type": "menu:dashboard",
+        "open": true,
+        "name": "待处理",
+        "expression": "state:dashboard.paper.list({type:'processing'})",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "paper.processed",
+        "type": "menu:dashboard",
+        "open": true,
+        "name": "已处理",
+        "expression": "state:dashboard.paper.list({type:'processed'})",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "paper.mine",
+        "type": "menu:dashboard",
+        "open": true,
+        "name": "我起草的",
+        "expression": "state:dashboard.paper.list({type:'draft-mine'})",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "paper.draft",
+        "type": "menu:dashboard",
+        "open": true,
+        "name": "草稿",
+        "expression": "state:dashboard.paper.list({type:'draft'})",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "paper.revoked",
+        "type": "menu:dashboard",
+        "open": true,
+        "name": "撤回",
+        "expression": "state:dashboard.paper.list({type:'revoked'})",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "paper.ended",
+        "type": "menu:dashboard",
+        "open": true,
+        "name": "结束",
+        "expression": "state:dashboard.paper.list({type:'ended'})",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "paper.favorite",
+        "type": "menu:dashboard",
+        "open": true,
+        "name": "收藏夹",
+        "expression": "state:dashboard.paper.list({type:'favorite'})",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      }
+    ]
+  },
+  {
+    "code": "contact",
+    "type": "menu:dashboard",
+    "open": true,
+    "name": "我的通讯录",
+    "expression": "state:dashboard.contacts.orgtree",
+    "patterns": [
+      "/api/contacts**",
+      "/api/contacts/**"
+    ],
+    "metadata": {
+      "icon": "fa fa-phone"
+    }
+  },
+  {
+    "virtual": true,
+    "type": "menu:dashboard",
+    "code": "publish",
+    "name": "发布管理",
+    "expression": "",
+    "patterns": [
+    ],
+    "metadata": {
+      "icon": "fa fa-th"
+    },
+    "children": [
+      {
+        "code": "news",
+        "type": "menu:dashboard",
+        "name": "新闻管理",
+        "expression": "state:dashboard.news.list",
+        "patterns": [
+          "/api/news**",
+          "/api/news/**"
+        ],
+        "metadata": {
+          "icon": "fa fa-rss"
+        }
+      },
+      {
+        "code": "notification",
+        "type": "menu:dashboard",
+        "name": "通知管理",
+        "expression": "state:dashboard.notification.list",
+        "patterns": [
+          "/api/notices**",
+          "/api/notices/**"
+        ],
+        "metadata": {
+          "icon": "fa fa-quote-left"
+        }
+      },
+      {
+        "code": "attachment",
+        "type": "menu:dashboard",
+        "name": "下载管理",
+        "expression": "state:dashboard.attachment.list",
+        "patterns": [
+          "/api/attachments**",
+          "/api/attachments/**"
+        ],
+        "metadata": {
+          "icon": "fa fa-download"
+        }
+      }
+    ]
+  },
+  {
+    "virtual": true,
+    "type": "menu:dashboard",
+    "code": "project",
+    "name": "项目管理",
+    "expression": "",
+    "patterns": [
+    ],
+    "metadata": {
+      "icon": "fa fa-briefcase"
+    },
+    "children": [
+      {
+        "code": "project.project",
+        "type": "menu:dashboard",
+        "name": "立项管理",
+        "expression": "state:dashboard.project.list",
+        "patterns": [
+          "/api/projects**",
+          "/api/projects/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "project.contract",
+        "type": "menu:dashboard",
+        "name": "主合同管理",
+        "expression": "state:dashboard.contract.list",
+        "patterns": [
+          "/api/contracts**",
+          "/api/contracts/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "project.subcontractor",
+        "type": "menu:dashboard",
+        "name": "分包合同管理",
+        "expression": "state:dashboard.subcontract.list",
+        "patterns": [
+          "/api/subContracts**",
+          "/api/subContracts/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "project.order",
+        "type": "menu:dashboard",
+        "name": "主订单管理",
+        "expression": "state:dashboard.order.list",
+        "patterns": [
+          "/api/orders**",
+          "/api/orders/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "project.suborder",
+        "type": "menu:dashboard",
+        "name": "分包订单管理",
+        "expression": "state:dashboard.suborder.list",
+        "patterns": [
+          "/api/subOrders**",
+          "/api/subOrders/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "project.completion",
+        "type": "menu:dashboard",
+        "name": "竣工管理",
+        "expression": "state:dashboard.projectCompletion.list",
+        "patterns": [
+          "/api/projectCompletions**",
+          "/api/projectCompletions/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "project.settlement",
+        "type": "menu:dashboard",
+        "name": "结算管理",
+        "expression": "state:dashboard.projectSettlement.list",
+        "patterns": [
+          "/api/projectSettlements**",
+          "/api/projectSettlements/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "project.license",
+        "type": "menu:dashboard",
+        "name": "外管证",
+        "expression": "state:dashboard.license.list",
+        "patterns": [
+          "/api/licenses**",
+          "/api/licenses/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "project.issueInvoice",
+        "type": "menu:dashboard",
+        "name": "开票",
+        "expression": "state:dashboard.issueInvoice.list",
+        "patterns": [
+          "/api/issueInvoices**",
+          "/api/issueInvoices/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "project.receiveInvoice",
+        "type": "menu:dashboard",
+        "name": "收票",
+        "expression": "state:dashboard.receiveInvoice.list",
+        "patterns": [
+          "/api/receiveInvoices**",
+          "/api/receiveInvoices/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "project.payment",
+        "type": "menu:dashboard",
+        "name": "付款",
+        "expression": "state:dashboard.payment.list",
+        "patterns": [
+          "/api/payments**",
+          "/api/payments/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "project.reimburseDevOps",
+        "type": "menu:dashboard",
+        "name": "报销",
+        "expression": "state:dashboard.reimburseDevOps.list",
+        "patterns": [
+          "/api/reimburseDevOps**",
+          "/api/reimburseDevOps/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "project.pendingPayment",
+        "type": "menu:dashboard",
+        "name": "待付款",
+        "expression": "state:dashboard.pendingPayment.list",
+        "patterns": [
+          "/api/pendingPayments**",
+          "/api/pendingPayments/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "project.projectReceivedPayment",
+        "type": "menu:dashboard",
+        "name": "项目回款",
+        "expression": "state:dashboard.projectReceivedPayment.list",
+        "patterns": [
+          "/api/projectReceivedPayments**",
+          "/api/projectReceivedPayments/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "project.companyReceivedPayment",
+        "type": "menu:dashboard",
+        "name": "公司回款",
+        "expression": "state:dashboard.companyReceivedPayment.list",
+        "patterns": [
+          "/api/companyReceivedPayments**",
+          "/api/companyReceivedPayments/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "project.lending",
+        "type": "menu:dashboard",
+        "name": "借款还款",
+        "expression": "state:dashboard.lending.index",
+        "patterns": [
+          "/api/lendings**",
+          "/api/lendings/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "project.deposit",
+        "type": "menu:dashboard",
+        "name": "保证金",
+        "expression": "state:dashboard.deposit.list",
+        "patterns": [
+          "/api/deposits**",
+          "/api/deposits/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "project.salary",
+        "type": "menu:dashboard",
+        "name": "工资",
+        "expression": "state:dashboard.salary.index",
+        "patterns": [
+          "/api/salaries**",
+          "/api/salaries/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "type": "menu:dashboard",
+        "code": "company.monitor",
+        "name": "公司监管",
+        "expression": "state:dashboard.companyMonitor.list",
+        "patterns": [
+          "/api/report/company**",
+          "/api/report/company/**"
+        ],
+        "metadata": {
+          "icon": "fa fa-dashboard"
+        },
+        "children": [
+        ]
+      },
+      {
+        "type": "menu:dashboard",
+        "code": "bizDept.monitor",
+        "name": "部门监管",
+        "expression": "state:dashboard.bizDepartmentMonitor.list",
+        "patterns": [
+          "/api/monitor/bizDepartments**",
+          "/api/monitor/bizDepartments/**"
+        ],
+        "metadata": {
+          "icon": "fa fa-dashboard"
+        },
+        "children": [
+        ]
+      },
+      {
+        "type": "menu:dashboard",
+        "code": "project.monitor",
+        "name": "项目监管",
+        "expression": "state:dashboard.projectMonitor.list",
+        "patterns": [
+          "/api/monitor/projects**",
+          "/api/monitor/projects/**"
+        ],
+        "metadata": {
+          "icon": "fa fa-dashboard"
+        },
+        "children": [
+        ]
+      },
+      {
+        "type": "menu:dashboard",
+        "code": "project.monitorByYear",
+        "name": "小项目监管",
+        "expression": "state:dashboard.projectMonitorByYear.list",
+        "patterns": [
+          "/api/monitor/projects**",
+          "/api/monitor/projects/**"
+        ],
+        "metadata": {
+          "icon": "fa fa-dashboard"
+        },
+        "children": [
+        ]
+      },
+      {
+        "type": "menu:dashboard",
+        "code": "project.profit",
+        "name": "项目提成",
+        "expression": "state:dashboard.projectProfit.list",
+        "patterns": [
+          "/api/projectProfits**",
+          "/api/projectProfits/**"
+        ],
+        "metadata": {
+          "icon": "fa fa-dashboard"
+        },
+        "children": [
+        ]
+      }
+    ]
+  },
+  {
+    "virtual": true,
+    "type": "menu:dashboard",
+    "code": "basement",
+    "name": "基础数据",
+    "expression": "",
+    "patterns": [
+    ],
+    "metadata": {
+      "icon": "fa fa-cubes"
+    },
+    "children": [
+      {
+        "code": "dashboard.dictionary",
+        "type": "menu:dashboard",
+        "name": "数据字典",
+        "expression": "state:dashboard.dictionary.projectType",
+        "patterns": [
+          "/api/dictionary**",
+          "/api/dictionary/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "dashboard.basedata",
+        "type": "menu:dashboard",
+        "name": "基础数据",
+        "expression": "state:dashboard.basedata.company",
+        "patterns": [
+          "/api/basement**",
+          "/api/basement/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "dashboard.accountSubject",
+        "type": "menu:dashboard",
+        "name": "会计科目",
+        "expression": "state:dashboard.accountSubject.list",
+        "patterns": [
+          "/api/accountSubjects**",
+          "/api/accountSubjects/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "dashboard.budget",
+        "type": "menu:dashboard",
+        "name": "预算管理",
+        "expression": "state:dashboard.budget.list",
+        "patterns": [
+          "/api/budgets**",
+          "/api/budgets/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "dashboard.companyCapital",
+        "type": "menu:companyCapital",
+        "name": "公司资金管理",
+        "expression": "state:dashboard.companyCapital.list",
+        "patterns": [
+          "/api/companyCapitals**",
+          "/api/companyCapitals/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      }
+    ]
+  },
+  {
+    "code": "organization",
+    "type": "menu:dashboard",
+    "name": "组织机构管理",
+    "expression": "state:dashboard.organization.index",
+    "patterns": [
+      "/api/organizations**",
+      "/api/organizations/**",
+      "/api/appusers**",
+      "/api/appusers/**"
+    ],
+    "metadata": {
+      "icon": "fa fa-sitemap"
+    }
+  },
+  {
+    "virtual": true,
+    "type": "menu:dashboard",
+    "code": "system",
+    "name": "系统管理",
+    "expression": "",
+    "patterns": [
+    ],
+    "metadata": {
+      "icon": "fa fa-gear"
+    },
+    "children": [
+      {
+        "code": "system.sysuser",
+        "type": "menu:dashboard",
+        "name": "系统用户",
+        "expression": "state:dashboard.sysuser.list",
+        "patterns": [
+          "/api/sysusers**",
+          "/api/sysusers/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "system.role",
+        "type": "menu:dashboard",
+        "name": "角色管理",
+        "expression": "state:dashboard.role.list",
+        "patterns": [
+          "/api/roles**",
+          "/api/roles/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "system.permission",
+        "type": "menu:dashboard",
+        "name": "权限管理",
+        "expression": "state:dashboard.privilege.list",
+        "patterns": [
+          "/api/resources**",
+          "/api/resources/**",
+          "/api/permissions**",
+          "/api/permissions/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "system.archiveduser",
+        "type": "menu:dashboard",
+        "name": "归档用户",
+        "expression": "state:dashboard.archiveduser.list",
+        "patterns": [
+          "/api/archivedusers**",
+          "/api/archivedusers/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "system.sms",
+        "type": "menu:dashboard",
+        "name": "短信发送记录",
+        "expression": "state:dashboard.smsHistory.list",
+        "patterns": [
+          "/api/smsHistories**",
+          "/api/smsHistories/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "system.auditEvent",
+        "type": "menu:dashboard",
+        "name": "操作审计",
+        "expression": "state:dashboard.audit.list",
+        "patterns": [
+          "/api/auditEvents**",
+          "/api/auditEvents/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "system.authEvent",
+        "type": "menu:dashboard",
+        "name": "登录审计",
+        "expression": "state:dashboard.authLog.list",
+        "patterns": [
+          "/api/authEvents**",
+          "/api/authEvents/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "system.auditReport",
+        "type": "menu:auditReport",
+        "name": "审计报表",
+        "expression": "state:dashboard.auditReport.list",
+        "patterns": [
+          "/api/auditReports**",
+          "/api/auditReports/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "system.paperLib",
+        "type": "menu:dashboard",
+        "name": "快文库",
+        "expression": "state:dashboard.paper.libList({type:'libList'})",
+        "patterns": [
+          "/api/system/papers**",
+          "/api/system/papers/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "system.setting",
+        "type": "menu:dashboard",
+        "name": "系统设置",
+        "expression": "state:dashboard.systemSetting.detail",
+        "patterns": [
+          "/api/system/setting**",
+          "/api/system/setting/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      }
+    ]
+  }
+]
