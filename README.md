@@ -1,4 +1,8 @@
-# Changes
+# Quick Start
+
+
+> cd openapiServer
+> gradle clean bootRun
 
 ## Tech Deps
 

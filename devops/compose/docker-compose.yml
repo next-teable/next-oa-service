@@ -1,7 +1,7 @@
 version: '2.1'
 services:
   rabbitmq:
-    container_name: webhookee-rabbitmq
+    container_name: rabbitmq
     image: rabbitmq:3-management
     ports:
       - "4367:4367"
@@ -9,7 +9,7 @@ services:
       - "5672:5672"
       - "15672:15672"
   mongodb:
-    container_name: webhookee-mongodb
+    container_name: mongodb
     image: mongo
     ports:
       - "27017:27017"
