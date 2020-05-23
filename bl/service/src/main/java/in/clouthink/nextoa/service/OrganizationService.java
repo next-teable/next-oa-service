@@ -3,7 +3,7 @@ package in.clouthink.nextoa.service;
 import in.clouthink.nextoa.model.Group;
 import in.clouthink.nextoa.model.Organization;
 import in.clouthink.nextoa.model.User;
-import cn.com.starest.nextoa.model.dtr.*;
+import in.clouthink.nextoa.model.dtr.*;
 import in.clouthink.nextoa.model.dtr.*;
 import org.springframework.data.domain.Page;
 

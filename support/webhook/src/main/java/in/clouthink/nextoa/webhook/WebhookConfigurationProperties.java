@@ -2,7 +2,7 @@ package in.clouthink.nextoa.webhook;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = "cn.com.starest.nextoa.webhook")
+@ConfigurationProperties(prefix = "in.clouthink.nextoa.webhook")
 public class WebhookConfigurationProperties {
 
 	private String url = "https://hook.bearychat.com/=bwBrq/incoming/403427090b0555b1804f0160f338ae29";

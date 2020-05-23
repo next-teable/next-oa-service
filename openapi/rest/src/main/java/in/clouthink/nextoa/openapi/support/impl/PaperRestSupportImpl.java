@@ -1,10 +1,10 @@
 package in.clouthink.nextoa.openapi.support.impl;
 
 import in.clouthink.nextoa.exception.PaperNotFoundException;
-import cn.com.starest.nextoa.model.*;
+import in.clouthink.nextoa.model.*;
 import in.clouthink.nextoa.model.dtr.PaperQueryRequest;
 import in.clouthink.nextoa.model.dtr.ReadPaperEvent;
-import cn.com.starest.nextoa.openapi.dto.*;
+import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.support.PaperRestSupport;
 import in.clouthink.nextoa.openapi.support.ReceiverBuilder;

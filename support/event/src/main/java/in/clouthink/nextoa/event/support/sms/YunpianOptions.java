@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  */
-@ConfigurationProperties(prefix = "cn.com.starest.nextoa.sms")
+@ConfigurationProperties(prefix = "in.clouthink.nextoa.sms")
 public class YunpianOptions {
 
 	private String key;

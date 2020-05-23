@@ -2,7 +2,7 @@ package in.clouthink.nextoa.openapi.support;
 
 import in.clouthink.nextoa.model.User;
 import in.clouthink.nextoa.model.UserOpinionSummary;
-import cn.com.starest.nextoa.openapi.dto.*;
+import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.dto.ChangeMyPasswordRequest;
 import in.clouthink.nextoa.openapi.dto.ChangeMyProfileParameter;
 import in.clouthink.nextoa.openapi.dto.MenuSummary;

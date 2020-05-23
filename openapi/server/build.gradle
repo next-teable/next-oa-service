@@ -42,7 +42,7 @@ dependencies {
 
 
 springBoot {
-    mainClass = "cn.com.starest.nextoa.openapi.OpenApiApplication"
+    mainClass = "in.clouthink.nextoa.openapi.OpenApiApplication"
 }
 
 bootRun {

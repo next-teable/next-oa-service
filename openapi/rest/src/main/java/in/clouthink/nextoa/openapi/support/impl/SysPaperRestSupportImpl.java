@@ -1,7 +1,7 @@
 package in.clouthink.nextoa.openapi.support.impl;
 
-import cn.com.starest.nextoa.model.*;
-import cn.com.starest.nextoa.openapi.dto.*;
+import in.clouthink.nextoa.model.*;
+import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.support.SysPaperRestSupport;
 import in.clouthink.nextoa.service.MessageService;

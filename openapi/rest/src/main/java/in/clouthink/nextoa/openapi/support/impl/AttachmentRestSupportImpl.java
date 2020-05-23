@@ -4,7 +4,7 @@ import in.clouthink.nextoa.model.Attachment;
 import in.clouthink.nextoa.model.AttachmentDownloadHistory;
 import in.clouthink.nextoa.model.User;
 import in.clouthink.nextoa.model.dtr.DownloadAttachmentEvent;
-import cn.com.starest.nextoa.openapi.dto.*;
+import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.support.AttachmentRestSupport;
 import in.clouthink.nextoa.service.AttachmentService;

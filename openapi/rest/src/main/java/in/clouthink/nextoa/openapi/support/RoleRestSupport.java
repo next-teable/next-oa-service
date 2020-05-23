@@ -2,7 +2,7 @@ package in.clouthink.nextoa.openapi.support;
 
 import in.clouthink.nextoa.model.AppRole;
 import in.clouthink.nextoa.model.dtr.RoleQueryRequest;
-import cn.com.starest.nextoa.openapi.dto.*;
+import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.dto.*;
 import org.springframework.data.domain.Page;
 

@@ -1,6 +1,6 @@
 package in.clouthink.nextoa.repository;
 
-import cn.com.starest.nextoa.model.*;
+import in.clouthink.nextoa.model.*;
 import in.clouthink.nextoa.model.ContactGroup;
 import in.clouthink.nextoa.model.User;
 import in.clouthink.nextoa.model.UserContactGroupRelationship;

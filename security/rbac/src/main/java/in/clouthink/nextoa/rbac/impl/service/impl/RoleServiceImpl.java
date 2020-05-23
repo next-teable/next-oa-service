@@ -3,7 +3,7 @@ package in.clouthink.nextoa.rbac.impl.service.impl;
 import in.clouthink.nextoa.exception.RoleException;
 import in.clouthink.nextoa.exception.RoleNotFoundException;
 import in.clouthink.nextoa.exception.UserNotFoundException;
-import cn.com.starest.nextoa.model.*;
+import in.clouthink.nextoa.model.*;
 import in.clouthink.nextoa.model.dtr.RoleQueryRequest;
 import in.clouthink.nextoa.model.dtr.SaveRoleRequest;
 import in.clouthink.nextoa.model.dtr.UserQueryRequest;

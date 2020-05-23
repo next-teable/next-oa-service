@@ -4,7 +4,7 @@ import in.clouthink.nextoa.model.Organization;
 import in.clouthink.nextoa.model.Paper;
 import in.clouthink.nextoa.model.User;
 import in.clouthink.nextoa.model.UserType;
-import cn.com.starest.nextoa.repository.*;
+import in.clouthink.nextoa.repository.*;
 import in.clouthink.nextoa.service.MigrationService;
 import in.clouthink.nextoa.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;

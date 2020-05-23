@@ -1,7 +1,7 @@
-cn.com.starest.nextoa.rbac:
+in.clouthink.nextoa.rbac:
   resourceFile: resources.json
 
-cn.com.starest.nextoa:
+in.clouthink.nextoa:
   email:
     smtp:
       host: ${EMAIL_SMTP_HOST}

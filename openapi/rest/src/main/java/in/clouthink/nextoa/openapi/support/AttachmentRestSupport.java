@@ -1,7 +1,7 @@
 package in.clouthink.nextoa.openapi.support;
 
 import in.clouthink.nextoa.model.User;
-import cn.com.starest.nextoa.openapi.dto.*;
+import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.daas.fss.core.FileObject;
 import in.clouthink.daas.fss.rest.UploadFileRequest;
 import in.clouthink.nextoa.openapi.dto.*;

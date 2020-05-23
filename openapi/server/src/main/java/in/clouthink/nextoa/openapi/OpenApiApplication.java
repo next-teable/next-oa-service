@@ -18,10 +18,10 @@ import org.springframework.context.annotation.Import;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @SpringBootApplication
-@ComponentScan({"cn.com.starest.nextoa.dashboard"})
+@ComponentScan({"in.clouthink.nextoa.dashboard"})
 @Import({OpenApiSecurityConfigurer.class, OpenApiWebMvcConfigurer.class})
-@EnableMongoRepositories({"cn.com.starest.nextoa.dashboard.support.audit.repository",
-						  "cn.com.starest.nextoa.dashboard.support.auth.repository"})
+@EnableMongoRepositories({"in.clouthink.nextoa.dashboard.support.audit.repository",
+						  "in.clouthink.nextoa.dashboard.support.auth.repository"})
 @EnableAudit
 public class OpenApiApplication  {
 

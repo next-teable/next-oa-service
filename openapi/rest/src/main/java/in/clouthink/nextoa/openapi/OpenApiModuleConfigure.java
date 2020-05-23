@@ -5,7 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan({"cn.com.starest.nextoa.openapi", "in.clouthink.daas.fss"})
+@ComponentScan({"in.clouthink.nextoa.openapi", "in.clouthink.daas.fss"})
 @EnableConfigurationProperties(OpenApiConfigurationProperties.class)
 public class OpenApiModuleConfigure {
 

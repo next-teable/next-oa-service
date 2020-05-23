@@ -3,7 +3,7 @@ package in.clouthink.nextoa.openapi.support.impl;
 import in.clouthink.nextoa.model.News;
 import in.clouthink.nextoa.model.NewsReadHistory;
 import in.clouthink.nextoa.model.User;
-import cn.com.starest.nextoa.openapi.dto.*;
+import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.support.NewsRestSupport;
 import in.clouthink.nextoa.service.NewsService;

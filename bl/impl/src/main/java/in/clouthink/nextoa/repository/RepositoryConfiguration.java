@@ -14,11 +14,11 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import java.util.Arrays;
 
 @Configuration
-@ComponentScan({"cn.com.starest.nextoa.repository"})
-@EnableMongoRepositories({"cn.com.starest.nextoa.repository"})
+@ComponentScan({"in.clouthink.nextoa.repository"})
+@EnableMongoRepositories({"in.clouthink.nextoa.repository"})
 public class RepositoryConfiguration {
 
-	public static final String CONFIGURATION_PREFIX = "cn.com.starest.nextoa.repository";
+	public static final String CONFIGURATION_PREFIX = "in.clouthink.nextoa.repository";
 
 	@Autowired
 	@Bean

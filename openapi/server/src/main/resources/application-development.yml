@@ -1,10 +1,10 @@
-cn.com.starest.nextoa.dashboard.administrator:
+in.clouthink.nextoa.dashboard.administrator:
   email: admin@clouthink.in
   username: administrator
   cellphone: 13333333333
   password: z@88888888
 
-cn.com.starest.nextoa:
+in.clouthink.nextoa:
   email:
     smtp:
       host: smtp.163.com

@@ -5,7 +5,7 @@ import in.clouthink.nextoa.model.AppRole;
 import in.clouthink.nextoa.model.SysRole;
 import in.clouthink.nextoa.model.User;
 import in.clouthink.nextoa.model.dtr.RoleQueryRequest;
-import cn.com.starest.nextoa.openapi.dto.*;
+import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.support.RoleRestSupport;
 import in.clouthink.nextoa.rbac.impl.service.RoleService;

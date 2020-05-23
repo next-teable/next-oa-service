@@ -3,7 +3,7 @@ package in.clouthink.nextoa.openapi.support.impl;
 import in.clouthink.nextoa.model.Notice;
 import in.clouthink.nextoa.model.NoticeReadHistory;
 import in.clouthink.nextoa.model.User;
-import cn.com.starest.nextoa.openapi.dto.*;
+import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.support.NoticeRestSupport;
 import in.clouthink.nextoa.service.NoticeService;

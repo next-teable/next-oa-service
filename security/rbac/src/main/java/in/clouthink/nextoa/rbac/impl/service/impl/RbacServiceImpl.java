@@ -1,7 +1,7 @@
 package in.clouthink.nextoa.rbac.impl.service.impl;
 
 import in.clouthink.nextoa.model.SysRole;
-import cn.com.starest.nextoa.rbac.core.model.*;
+import in.clouthink.nextoa.rbac.core.model.*;
 import in.clouthink.nextoa.rbac.core.model.*;
 import in.clouthink.nextoa.rbac.core.spi.RbacService;
 import in.clouthink.nextoa.rbac.core.spi.ResourceService;

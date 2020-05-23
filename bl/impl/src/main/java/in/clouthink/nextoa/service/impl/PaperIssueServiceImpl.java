@@ -1,7 +1,7 @@
 package in.clouthink.nextoa.service.impl;
 
 import in.clouthink.nextoa.exception.PaperNotFoundException;
-import cn.com.starest.nextoa.model.*;
+import in.clouthink.nextoa.model.*;
 import in.clouthink.nextoa.model.*;
 import in.clouthink.nextoa.repository.PaperActionRepository;
 import in.clouthink.nextoa.repository.PaperRepository;

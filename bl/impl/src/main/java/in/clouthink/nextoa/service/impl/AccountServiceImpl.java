@@ -3,7 +3,7 @@ package in.clouthink.nextoa.service.impl;
 import in.clouthink.nextoa.exception.UserException;
 import in.clouthink.nextoa.exception.UserNotFoundException;
 import in.clouthink.nextoa.exception.UserPasswordException;
-import cn.com.starest.nextoa.model.*;
+import in.clouthink.nextoa.model.*;
 import in.clouthink.nextoa.model.*;
 import in.clouthink.nextoa.model.dtr.AbstractUserRequest;
 import in.clouthink.nextoa.model.dtr.ChangeUserProfileRequest;

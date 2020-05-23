@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * Created by dz on 16/5/12.
  */
-@ConfigurationProperties(prefix = "cn.com.starest.nextoa.email.smtp")
+@ConfigurationProperties(prefix = "in.clouthink.nextoa.email.smtp")
 public class EmailOptions {
 
 	private String host;

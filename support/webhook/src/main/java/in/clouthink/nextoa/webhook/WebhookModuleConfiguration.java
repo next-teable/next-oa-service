@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan({"cn.com.starest.nextoa.webhook.client"})
+@ComponentScan({"in.clouthink.nextoa.webhook.client"})
 @EnableConfigurationProperties(WebhookConfigurationProperties.class)
 public class WebhookModuleConfiguration {
 

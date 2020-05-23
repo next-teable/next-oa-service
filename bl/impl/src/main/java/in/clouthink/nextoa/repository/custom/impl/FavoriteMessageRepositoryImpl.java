@@ -1,6 +1,6 @@
 package in.clouthink.nextoa.repository.custom.impl;
 
-import cn.com.starest.nextoa.model.*;
+import in.clouthink.nextoa.model.*;
 import in.clouthink.nextoa.model.*;
 import in.clouthink.nextoa.model.dtr.MessageQueryRequest;
 import in.clouthink.nextoa.repository.custom.FavoriteMessageRepositoryCustom;

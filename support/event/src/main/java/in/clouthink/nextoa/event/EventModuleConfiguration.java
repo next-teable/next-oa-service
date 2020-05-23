@@ -18,7 +18,7 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 /**
  */
 @Configuration
-@ComponentScan({"cn.com.starest.nextoa.event"})
+@ComponentScan({"in.clouthink.nextoa.event"})
 @EnableConfigurationProperties({EmailOptions.class, SenderOptions.class, YunpianOptions.class})
 public class EventModuleConfiguration {
 

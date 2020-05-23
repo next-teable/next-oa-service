@@ -3,7 +3,7 @@ package in.clouthink.nextoa.openapi.support.impl;
 import in.clouthink.nextoa.model.ContactGroup;
 import in.clouthink.nextoa.model.User;
 import in.clouthink.nextoa.model.UserType;
-import cn.com.starest.nextoa.openapi.dto.*;
+import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.support.ContactRestSupport;
 import in.clouthink.nextoa.service.AccountService;

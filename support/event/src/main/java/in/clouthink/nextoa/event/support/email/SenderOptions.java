@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
  */
-@ConfigurationProperties(prefix = "cn.com.starest.nextoa.email.sender")
+@ConfigurationProperties(prefix = "in.clouthink.nextoa.email.sender")
 public class SenderOptions {
 
 	private String from;

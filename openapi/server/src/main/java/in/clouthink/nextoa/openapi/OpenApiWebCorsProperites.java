@@ -14,7 +14,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  *
  * @author dz
  */
-@ConfigurationProperties(prefix = "cn.com.starest.nextoa.openapi.cors")
+@ConfigurationProperties(prefix = "in.clouthink.nextoa.openapi.cors")
 public class OpenApiWebCorsProperites {
 
 	private boolean allowCredentials = true;

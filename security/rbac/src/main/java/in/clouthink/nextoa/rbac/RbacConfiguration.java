@@ -13,8 +13,8 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
  *
  */
 @Configuration
-@ComponentScan({"cn.com.starest.nextoa.rbac"})
-@EnableMongoRepositories({"cn.com.starest.nextoa.rbac"})
+@ComponentScan({"in.clouthink.nextoa.rbac"})
+@EnableMongoRepositories({"in.clouthink.nextoa.rbac"})
 @EnableConfigurationProperties(RbacConfigurationProperties.class)
 public class RbacConfiguration {
 

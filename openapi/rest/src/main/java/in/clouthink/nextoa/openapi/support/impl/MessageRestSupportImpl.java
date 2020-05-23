@@ -1,9 +1,9 @@
 package in.clouthink.nextoa.openapi.support.impl;
 
-import cn.com.starest.nextoa.model.*;
+import in.clouthink.nextoa.model.*;
 import in.clouthink.nextoa.model.dtr.MessageQueryRequest;
 import in.clouthink.nextoa.model.dtr.PageQueryRequest;
-import cn.com.starest.nextoa.openapi.dto.*;
+import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.support.MessageRestSupport;
 import in.clouthink.nextoa.service.MessageService;

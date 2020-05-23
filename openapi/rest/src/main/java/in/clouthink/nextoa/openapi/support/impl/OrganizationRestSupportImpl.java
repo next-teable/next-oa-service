@@ -3,7 +3,7 @@ package in.clouthink.nextoa.openapi.support.impl;
 import in.clouthink.nextoa.exception.UserNotFoundException;
 import in.clouthink.nextoa.model.Organization;
 import in.clouthink.nextoa.model.User;
-import cn.com.starest.nextoa.openapi.dto.*;
+import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.support.OrganizationRestSupport;
 import in.clouthink.nextoa.service.AccountService;

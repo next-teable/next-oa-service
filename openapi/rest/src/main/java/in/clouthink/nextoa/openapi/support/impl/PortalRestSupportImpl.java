@@ -1,13 +1,13 @@
 package in.clouthink.nextoa.openapi.support.impl;
 
-import cn.com.starest.nextoa.model.*;
+import in.clouthink.nextoa.model.*;
 import in.clouthink.nextoa.model.dtr.MessageQueryRequest;
 import in.clouthink.nextoa.model.dtr.ReadNewsEvent;
 import in.clouthink.nextoa.model.dtr.ReadNoticeEvent;
-import cn.com.starest.nextoa.openapi.dto.*;
+import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.dto.*;
 import in.clouthink.nextoa.openapi.support.PortalRestSupport;
-import cn.com.starest.nextoa.service.*;
+import in.clouthink.nextoa.service.*;
 import in.clouthink.daas.edm.Edms;
 import in.clouthink.nextoa.model.*;
 import in.clouthink.nextoa.service.*;

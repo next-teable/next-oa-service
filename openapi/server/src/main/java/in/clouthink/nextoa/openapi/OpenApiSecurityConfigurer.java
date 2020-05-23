@@ -2,7 +2,7 @@ package in.clouthink.nextoa.openapi;
 
 import in.clouthink.nextoa.dashboard.support.spring.security.UserDetailsAuthenticationProviderImpl;
 import in.clouthink.nextoa.dashboard.support.spring.security.UserDetailsServiceImpl;
-import cn.com.starest.nextoa.dashboard.support.spring.security.rest.*;
+import in.clouthink.nextoa.dashboard.support.spring.security.rest.*;
 import in.clouthink.nextoa.dashboard.support.spring.security.rest.*;
 import in.clouthink.nextoa.rbac.impl.spring.security.RbacWebSecurityExpressionHandler;
 import org.springframework.context.annotation.Bean;

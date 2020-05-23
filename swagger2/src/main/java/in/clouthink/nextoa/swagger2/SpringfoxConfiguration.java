@@ -18,7 +18,7 @@ import java.time.LocalDate;
 
 @Configuration
 @EnableSwagger2
-@ComponentScan("cn.com.starest.nextoa.openapi")
+@ComponentScan("in.clouthink.nextoa.openapi")
 public class SpringfoxConfiguration {
 
 	@Autowired

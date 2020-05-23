@@ -1,11 +1,11 @@
 package in.clouthink.nextoa.service.impl;
 
 import in.clouthink.nextoa.exception.PaperNotFoundException;
-import cn.com.starest.nextoa.model.*;
+import in.clouthink.nextoa.model.*;
 import in.clouthink.nextoa.model.*;
 import in.clouthink.nextoa.model.dtr.DefaultMessageNotifyRequest;
 import in.clouthink.nextoa.model.dtr.MessageNotifyRequest;
-import cn.com.starest.nextoa.repository.*;
+import in.clouthink.nextoa.repository.*;
 import in.clouthink.nextoa.service.PaperInnerService;
 import in.clouthink.daas.edm.Edms;
 import in.clouthink.nextoa.repository.*;
