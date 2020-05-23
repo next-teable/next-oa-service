@@ -3,10 +3,11 @@ spring:
     name: nextoa
 
 logging:
-  file: ${LOG_FILE:nextoa.log}
-    max-size: ${LOG_MAX_FILE_SIZE:10}
+  file:
+    name: ${LOG_FILE_NAME:nextoa.log}
+    path: ${LOG_FILE_PATH:/var/logging}
+    max-size: ${LOG_FILE_MAX_SIZE:10}
+    max-history: ${LOG_FILE_MAX_HISTORY:10}
   level:
     root: ${LOG_LEVEL:INFO}
     in.clouthink: ${LOG_LEVEL_APP:DEBUG}
-  maxFileSize: ${LOG_MAX_FILE_SIZE:10}
-  totalSizeCap: ${LOG_TOTAL_SIZE_CAP:100}

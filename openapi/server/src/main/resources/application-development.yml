@@ -24,6 +24,10 @@ cn.com.starest.nextoa:
       shortUrl: http://117.177.38.55:9999/s/%s
       longUrl: http://117.177.38.55:9999/portal#!//static/app/mobile/paper/detail.html?messageId=%s
 
+logging:
+  file:
+    name: nextoa.log
+    path: .
 
 server:
   port: 8081
