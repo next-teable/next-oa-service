@@ -8,8 +8,6 @@ dependencies {
 
     compile project(':shared')
     compile project(':model')
-    compile project(':repository')
-    compile project(':repositoryImpl')
     compile project(':service')
     compile project(':serviceImpl')
     compile project(':rbac')

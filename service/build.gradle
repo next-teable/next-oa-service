@@ -4,5 +4,4 @@ plugins {
 
 dependencies {
 	compile project(':model')
-	compile project(':repository')
 }

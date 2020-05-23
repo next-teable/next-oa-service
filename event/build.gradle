@@ -7,6 +7,6 @@ dependencies {
 
     compile project(":shared")
     compile project(':model')
-    compile project(':repository')
     compile project(':service')
+    compile project(':serviceImpl')
 }

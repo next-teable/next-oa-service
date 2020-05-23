@@ -1,8 +1,6 @@
 rootProject.name = 'nextoa'
 include 'shared'
 include 'model'
-include 'repository'
-include 'repositoryImpl'
 include 'service'
 include 'serviceImpl'
 include 'rbac'
