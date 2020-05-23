@@ -1,0 +1,72 @@
+cn.com.starest.nextoa.rbac:
+  resourceFile: resources.json
+
+cn.com.starest.nextoa:
+  email:
+    smtp:
+      host: ${EMAIL_SMTP_HOST}
+      port: ${EMAIL_SMTP_PORT}
+      username: ${EMAIL_SMTP_USERNAME}
+      password: ${EMAIL_SMTP_PASSWORD}
+    sender:
+      from: ${EMAIL_SENDER_FROM}
+      fromAlias: ${EMAIL_SENDER_FROM_ALIAS}
+      shortUrl: ${SENDER_SHORT_URL}
+      longUrl: ${SENDER_LONG_URL}
+  sms:
+    key: ${SMS_KEY}
+    secret: ${SMS_SECRET}
+    templateId: ${SMS_TEMPLATEID}
+    endpoint: ${SMS_ENDPOINT}
+    shortUrl: ${SENDER_SHORT_URL}
+    longUrl: ${SENDER_LONG_URL}
+
+management:
+  context-path: /actuator
+  security:
+    enabled: false
+
+info:
+  app:
+    name: nextoa
+    version: ${APP_VERSION:unknown}
+
+server:
+  port: ${SERVER_PORT:80}
+  error:
+    include-stacktrace: NEVER
+  session:
+    timeout: ${SERVER_SESSION_TIMEOUT:36000}
+  connection-timeout: ${SERVER_CONN_TIMEOUT:30000}
+  tomcat:
+    accept-count: ${TOMCAT_ACCEPT_COUNT:1000}
+    max-threads: ${TOMCAT_MAX_THREADS:1000}
+    min-spare-threads: ${TOMCAT_MIN_SPARE_THREADS:10}
+    max-connections: ${TOMCAT_MAX_CONNS:10000}
+
+spring:
+  messages:
+    basename: locale/messages
+  mvc:
+    date-format: yyyy-MM-dd
+    favicon:
+      enabled: false
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  jackson:
+    date-format: yyyy-MM-dd
+    serialization:
+      write-dates-as-timestamps: true
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://127.0.0.1:27017/nextoa}
+    redis:
+      repositories.enabled: false
+  redis:
+    host: ${REDIS_HOST:127.0.0.1}
+    port: ${REDIS_PORT:6379}
+  profiles:
+    active: production

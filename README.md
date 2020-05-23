@@ -1,8 +1,4 @@
-# Quick Start
-
-
-> cd openapiServer
-> gradle clean bootRun
+# Deps
 
 ## Tech Deps
 
@@ -24,3 +20,14 @@ And
 Mongodb GridFS is removed from V2
 
 
+# Dev
+
+## Quick Start
+
+> cd openapiServer
+> gradle clean bootRun
+
+
+# Prd
+
+## 

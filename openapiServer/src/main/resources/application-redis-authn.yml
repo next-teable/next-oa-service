@@ -1,0 +1,4 @@
+spring:
+  redis:
+    username: ${REDIS_USERNAME}
+    password: ${REDIS_PASSWORD}

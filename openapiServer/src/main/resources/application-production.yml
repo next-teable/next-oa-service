@@ -1,0 +1,15 @@
+cn.com.starest.nextoa.email:
+  smtp:
+    host: smtp.163.com
+    port: 25
+    username: istarest@163.com
+    password: z@88888888
+  sender:
+    from: istarest@163.com
+    fromAlias: \u661f\u8fb0\u4f73\u529e\u516c\u7f51
+    shortUrl: http://117.177.38.55:9999/s/%s
+    longUrl: http://117.177.38.55:9999/portal#!//static/app/mobile/paper/detail.html?messageId=%s
+
+
+logging:
+  file: ${LOG_FILE:/var/log/nextoa.log}

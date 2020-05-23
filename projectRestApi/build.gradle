@@ -1,7 +1,0 @@
-dependencies {
-
-	compile project(':projectModel')
-	compile project(':projectService')
-	compile project(':openapi')
-
-}

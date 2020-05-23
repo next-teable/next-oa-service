@@ -1,6 +1,0 @@
-dependencies {
-
-    compile project(':service')
-    compile project(':projectModel')
-    compile project(':projectService')
-}
