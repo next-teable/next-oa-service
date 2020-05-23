@@ -1,0 +1,14 @@
+plugins {
+    id "java"
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-security'
+
+    compile project(':shared')
+    compile project(':bl:model')
+    compile project(':bl:service')
+    compile project(':bl:impl')
+    compile project(':security:rbac')
+    compile project(':support:event')
+}

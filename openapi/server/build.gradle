@@ -4,9 +4,14 @@ plugins {
 
 dependencies {
 
-    compile "io.swagger:swagger-annotations:1.5.21"
-    compile "io.springfox:springfox-swagger2:2.9.2"
-    compile "io.springfox:springfox-swagger-ui:2.9.2"
+    compile "in.clouthink.daas:daas-token:1.4.6"
+    compile "in.clouthink.daas:daas-we:2.1.1"
+    compile "in.clouthink.daas:daas-edm:1.0.2"
+    compile "in.clouthink.daas:daas-edm-email:1.0.0"
+    compile "in.clouthink.daas:daas-edm-sms:1.1.0"
+    compile "in.clouthink.daas:daas-fss-core:1.0.4"
+    compile "in.clouthink.daas:daas-fss-mongodb:1.0.2"
+    compile "in.clouthink.daas:daas-audit:1.0.2"
 
     compile 'org.springframework.boot:spring-boot-starter'
     compile 'org.springframework.boot:spring-boot-starter-web'
@@ -20,8 +25,24 @@ dependencies {
     compile project(':bl:service')
     compile project(':bl:impl')
     compile project(':security:rbac')
+    compile project(':security:auth')
     compile project(':support:event')
+    compile project(':support:scheduler')
+    compile project(':support:webhook')
     compile project(':openapi:rest')
+
+}
+
+//
+//bootRun {
+//    if (project.hasProperty('jvmArgs')) {
+//        jvmArgs project.jvmArgs.split('\\s+')
+//    }
+//}
+
+
+springBoot {
+    mainClass = "cn.com.starest.nextoa.openapi.OpenApiApplication"
 }
 
 bootRun {

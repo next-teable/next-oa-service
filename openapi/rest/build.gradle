@@ -1,0 +1,13 @@
+plugins {
+    id "java"
+}
+
+dependencies {
+
+    compile project(':shared')
+    compile project(':bl:model')
+    compile project(':bl:service')
+    compile project(':security:rbac')
+    compile project(':security:auth')
+
+}

@@ -1,0 +1,9 @@
+plugins {
+	id "java"
+}
+
+dependencies {
+	compile project(':bl:model')
+	compile project(':bl:service')
+}
+
