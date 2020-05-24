@@ -1,4 +1,4 @@
-in.clouthink.nextoa.rbac:
+in.clouthink.nextoa.security.rbac:
   resourceFile: resources.json
 
 in.clouthink.nextoa:

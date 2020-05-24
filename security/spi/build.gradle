@@ -1,0 +1,10 @@
+plugins {
+    id "java"
+}
+
+dependencies {
+
+    compile 'org.springframework.boot:spring-boot-starter'
+    compile 'org.springframework.boot:spring-boot-starter-security'
+
+}

@@ -1,14 +1,14 @@
 package in.clouthink.nextoa.event.support.impl;
 
-import in.clouthink.nextoa.event.support.EmailService;
-import in.clouthink.nextoa.event.support.email.SenderOptions;
-import in.clouthink.nextoa.model.ShortUrl;
-import in.clouthink.nextoa.model.SystemSetting;
-import in.clouthink.nextoa.repository.ShortUrlRepository;
-import in.clouthink.nextoa.service.SystemSettingService;
-import in.clouthink.nextoa.shared.util.ShortenUrlUtils;
 import in.clouthink.daas.edm.email.EmailMessage;
 import in.clouthink.daas.edm.email.EmailSender;
+import in.clouthink.nextoa.bl.model.ShortUrl;
+import in.clouthink.nextoa.bl.model.SystemSetting;
+import in.clouthink.nextoa.bl.repository.ShortUrlRepository;
+import in.clouthink.nextoa.bl.service.SystemSettingService;
+import in.clouthink.nextoa.event.support.EmailService;
+import in.clouthink.nextoa.event.support.email.SenderOptions;
+import in.clouthink.nextoa.shared.util.ShortenUrlUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

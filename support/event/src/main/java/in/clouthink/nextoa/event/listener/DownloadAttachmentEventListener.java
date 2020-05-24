@@ -1,9 +1,9 @@
 package in.clouthink.nextoa.event.listener;
 
-import in.clouthink.nextoa.model.dtr.DownloadAttachmentEvent;
-import in.clouthink.nextoa.service.AttachmentService;
 import in.clouthink.daas.edm.Edms;
 import in.clouthink.daas.edm.EventListener;
+import in.clouthink.nextoa.bl.request.DownloadAttachmentEvent;
+import in.clouthink.nextoa.bl.service.AttachmentService;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

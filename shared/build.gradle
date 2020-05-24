@@ -3,7 +3,6 @@ plugins {
 }
 
 dependencies {
-
     compile "in.clouthink.daas:daas-token:1.4.6"
     compile "in.clouthink.daas:daas-we:2.1.1"
     compile "in.clouthink.daas:daas-edm:1.0.2"
@@ -12,7 +11,6 @@ dependencies {
     compile "in.clouthink.daas:daas-fss-core:1.0.4"
     compile "in.clouthink.daas:daas-fss-mongodb:1.0.2"
     compile "in.clouthink.daas:daas-audit:1.0.2"
-
 
     compile "org.apache.commons:commons-lang3:3.4"
     compile "commons-codec:commons-codec:1.10"
@@ -30,5 +28,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
     compile 'org.springframework.boot:spring-boot-starter-web'
     compile 'org.springframework.boot:spring-boot-starter-security'
+
+    compile "io.swagger:swagger-annotations:1.5.21"
 
 }

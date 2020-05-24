@@ -9,6 +9,7 @@ dependencies {
     compile project(':bl:model')
     compile project(':bl:service')
     compile project(':bl:impl')
+    compile project(':security:spi')
     compile project(':security:rbac')
     compile project(':support:event')
 }

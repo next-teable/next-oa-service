@@ -1,14 +1,14 @@
 package in.clouthink.nextoa.event.support.impl;
 
-import in.clouthink.nextoa.event.support.SmsService;
-import in.clouthink.nextoa.event.support.sms.YunpianOptions;
-import in.clouthink.nextoa.model.ShortUrl;
-import in.clouthink.nextoa.model.SmsHistory;
-import in.clouthink.nextoa.repository.ShortUrlRepository;
-import in.clouthink.nextoa.repository.SmsHistoryRepository;
-import in.clouthink.nextoa.shared.util.ShortenUrlUtils;
 import in.clouthink.daas.edm.sms.AdvancedSmsMessage;
 import in.clouthink.daas.edm.sms.SmsSender;
+import in.clouthink.nextoa.bl.model.ShortUrl;
+import in.clouthink.nextoa.bl.model.SmsHistory;
+import in.clouthink.nextoa.bl.repository.ShortUrlRepository;
+import in.clouthink.nextoa.bl.repository.SmsHistoryRepository;
+import in.clouthink.nextoa.event.support.SmsService;
+import in.clouthink.nextoa.event.support.sms.YunpianOptions;
+import in.clouthink.nextoa.shared.util.ShortenUrlUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;

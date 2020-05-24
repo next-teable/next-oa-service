@@ -1,9 +1,9 @@
 package in.clouthink.nextoa.event.listener;
 
-import in.clouthink.nextoa.model.dtr.ReadPaperEvent;
-import in.clouthink.nextoa.service.PaperInnerService;
 import in.clouthink.daas.edm.Edms;
 import in.clouthink.daas.edm.EventListener;
+import in.clouthink.nextoa.bl.request.ReadPaperEvent;
+import in.clouthink.nextoa.bl.service.PaperInnerService;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

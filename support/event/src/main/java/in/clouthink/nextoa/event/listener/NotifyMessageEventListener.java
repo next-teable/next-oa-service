@@ -1,9 +1,9 @@
 package in.clouthink.nextoa.event.listener;
 
-import in.clouthink.nextoa.event.support.SmsService;
-import in.clouthink.nextoa.model.dtr.MessageNotifyRequest;
 import in.clouthink.daas.edm.Edms;
 import in.clouthink.daas.edm.EventListener;
+import in.clouthink.nextoa.bl.request.MessageNotifyRequest;
+import in.clouthink.nextoa.event.support.SmsService;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
