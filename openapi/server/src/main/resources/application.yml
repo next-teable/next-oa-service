@@ -45,8 +45,6 @@ server:
     max-connections: ${TOMCAT_MAX_CONNS:10000}
 
 spring:
-  messages:
-    basename: locale/messages
   mvc:
     date-format: yyyy-MM-dd
     favicon:

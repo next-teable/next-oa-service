@@ -1,0 +1,14 @@
+in.clouthink.nextoa.security.rbac.resourceFile: resources.json
+
+server:
+  port: ${SERVER_PORT:8081}
+
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://127.0.0.1:27017/nextoa-apidoc}
+    redis:
+      repositories.enabled: false
+  redis:
+    host: ${REDIS_HOST:127.0.0.1}
+    port: ${REDIS_PORT:6379}

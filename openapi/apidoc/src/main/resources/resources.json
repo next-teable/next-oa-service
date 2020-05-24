@@ -1,24 +1,25 @@
 [
   {
-    "type": "menu",
     "virtual": true,
+    "type": "menu:portal",
     "open": true,
-    "code": "paper",
-    "name": "我的快文",
+    "code": "portal",
+    "name": "门户",
     "expression": "",
     "patterns": [
-      "/api/papers**"
+      "/api/portal**",
+      "/api/portal/**"
     ],
     "metadata": {
       "icon": ""
     },
     "children": [
       {
-        "code": "paper.pending",
-        "type": "menu",
+        "code": "portal.index",
+        "type": "menu:portal",
+        "name": "首页",
         "open": true,
-        "name": "待处理",
-        "expression": "dashboard.paper.list",
+        "expression": "state:home.index",
         "patterns": [
         ],
         "metadata": {
@@ -26,11 +27,128 @@
         }
       },
       {
+        "code": "portal.notification",
+        "type": "menu:portal",
+        "name": "通知",
+        "open": true,
+        "expression": "state:notification.index",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "portal.news",
+        "type": "menu:portal",
+        "name": "新闻",
+        "open": true,
+        "expression": "state:news.index",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "portal.attachment",
+        "type": "menu:portal",
+        "name": "下载",
+        "open": true,
+        "expression": "state:attachment.index",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "contact",
+        "type": "menu:dashboard",
+        "name": "通讯录",
+        "open": true,
+        "expression": "state:dashboard.contacts.orgtree",
+        "patterns": [
+          "/api/contacts**",
+          "/api/contacts/**"
+        ],
+        "metadata": {
+          "icon": "fa fa-phone"
+        }
+      },
+      {
+        "code": "portal.dashboard",
+        "type": "menu:portal",
+        "name": "我的工作台",
+        "open": true,
+        "expression": "state:dashboard.paper.list({type:'notend'})",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      }
+    ]
+  },
+  {
+    "code": "my-portal",
+    "type": "menu:dashboard",
+    "name": "我的门户",
+    "open": true,
+    "expression": "state:home.index",
+    "patterns": [
+      "/api/portal**",
+      "/api/portal/**"
+    ],
+    "metadata": {
+      "icon": "fa fa-leaf"
+    }
+  },
+  {
+    "type": "menu:dashboard",
+    "virtual": true,
+    "open": true,
+    "code": "paper",
+    "name": "我的快文",
+    "expression": "",
+    "patterns": [
+      "/api/papers**",
+      "/api/papers/**"
+    ],
+    "metadata": {
+      "icon": ""
+    },
+    "children": [
+      {
         "code": "paper.all",
-        "type": "menu",
+        "type": "menu:dashboard",
         "open": true,
         "name": "全部",
-        "expression": "dashboard.paper.list",
+        "expression": "state:dashboard.paper.list({type:'notend'})",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "paper.pending",
+        "type": "menu:dashboard",
+        "open": true,
+        "name": "待处理",
+        "expression": "state:dashboard.paper.list({type:'processing'})",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "paper.processed",
+        "type": "menu:dashboard",
+        "open": true,
+        "name": "已处理",
+        "expression": "state:dashboard.paper.list({type:'processed'})",
         "patterns": [
         ],
         "metadata": {
@@ -39,10 +157,10 @@
       },
       {
         "code": "paper.mine",
-        "type": "menu",
+        "type": "menu:dashboard",
         "open": true,
         "name": "我起草的",
-        "expression": "dashboard.paper.list",
+        "expression": "state:dashboard.paper.list({type:'draft-mine'})",
         "patterns": [
         ],
         "metadata": {
@@ -51,10 +169,10 @@
       },
       {
         "code": "paper.draft",
-        "type": "menu",
+        "type": "menu:dashboard",
         "open": true,
         "name": "草稿",
-        "expression": "dashboard.paper.list",
+        "expression": "state:dashboard.paper.list({type:'draft'})",
         "patterns": [
         ],
         "metadata": {
@@ -63,10 +181,22 @@
       },
       {
         "code": "paper.revoked",
-        "type": "menu",
+        "type": "menu:dashboard",
         "open": true,
         "name": "撤回",
-        "expression": "dashboard.paper.list",
+        "expression": "state:dashboard.paper.list({type:'revoked'})",
+        "patterns": [
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "paper.ended",
+        "type": "menu:dashboard",
+        "open": true,
+        "name": "结束",
+        "expression": "state:dashboard.paper.list({type:'ended'})",
         "patterns": [
         ],
         "metadata": {
@@ -75,10 +205,10 @@
       },
       {
         "code": "paper.favorite",
-        "type": "menu",
+        "type": "menu:dashboard",
         "open": true,
         "name": "收藏夹",
-        "expression": "dashboard.paper.list",
+        "expression": "state:dashboard.paper.list({type:'favorite'})",
         "patterns": [
         ],
         "metadata": {
@@ -89,85 +219,92 @@
   },
   {
     "code": "news",
-    "type": "menu",
+    "type": "menu:dashboard",
     "name": "新闻管理",
-    "expression": "dashboard.news.index",
+    "expression": "state:dashboard.news.list",
     "patterns": [
-      "/api/news**"
+      "/api/news**",
+      "/api/news/**"
     ],
     "metadata": {
-      "icon": ""
+      "icon": "fa fa-rss"
     }
   },
   {
     "code": "notification",
-    "type": "menu",
+    "type": "menu:dashboard",
     "name": "通知管理",
-    "expression": "dashboard.notification.index",
+    "expression": "state:dashboard.notification.list",
     "patterns": [
-      "/api/notices**"
+      "/api/notices**",
+      "/api/notices/**"
     ],
     "metadata": {
-      "icon": ""
+      "icon": "fa fa-quote-left"
     }
   },
   {
     "code": "attachment",
-    "type": "menu",
+    "type": "menu:dashboard",
     "name": "下载管理",
-    "expression": "dashboard.attachment.list",
+    "expression": "state:dashboard.attachment.list",
     "patterns": [
-      "/api/attachments**"
+      "/api/attachments**",
+      "/api/attachments/**"
     ],
     "metadata": {
-      "icon": ""
+      "icon": "fa fa-download"
     }
   },
   {
     "code": "contact",
-    "type": "menu",
+    "type": "menu:dashboard",
     "open": true,
     "name": "我的通讯录",
-    "expression": "dashboard.contact.list",
+    "expression": "state:dashboard.contacts.orgtree",
     "patterns": [
-      "/api/contacts**"
+      "/api/contacts**",
+      "/api/contacts/**"
     ],
     "metadata": {
-      "icon": ""
+      "icon": "fa fa-phone"
     }
   },
   {
     "code": "organization",
-    "type": "menu",
+    "type": "menu:dashboard",
     "name": "组织机构管理",
-    "expression": "dashboard.organization.index",
+    "expression": "state:dashboard.organization.index",
     "patterns": [
+      "/api/organizations**",
       "/api/organizations/**",
+      "/api/appusers**",
       "/api/appusers/**"
     ],
     "metadata": {
-      "icon": ""
+      "icon": "fa fa-sitemap"
     }
   },
   {
     "virtual": true,
-    "type": "menu",
+    "type": "menu:dashboard",
     "code": "system",
     "name": "系统管理",
     "expression": "",
     "patterns": [
     ],
     "metadata": {
-      "icon": ""
+      "icon": "fa fa-gear"
     },
     "children": [
       {
         "code": "system.sysuser",
-        "type": "menu",
+        "type": "menu:dashboard",
         "name": "系统用户",
-        "expression": "dashboard.sysuser.list",
+        "expression": "state:dashboard.sysuser.list",
         "patterns": [
-          "/api/sysusers**"
+          "/api/sysusers**",
+          "/api/sysusers/**"
         ],
         "metadata": {
           "icon": ""
@@ -175,11 +312,12 @@
       },
       {
         "code": "system.role",
-        "type": "menu",
+        "type": "menu:dashboard",
         "name": "角色管理",
-        "expression": "dashboard.role.list",
+        "expression": "state:dashboard.role.list",
         "patterns": [
-          "/api/roles**"
+          "/api/roles**",
+          "/api/roles/**"
         ],
         "metadata": {
           "icon": ""
@@ -187,12 +325,27 @@
       },
       {
         "code": "system.permission",
-        "type": "menu",
+        "type": "menu:dashboard",
         "name": "权限管理",
-        "expression": "dashboard.permission.list",
+        "expression": "state:dashboard.privilege.list",
         "patterns": [
           "/api/resources**",
-          "/api/permissions**"
+          "/api/resources/**",
+          "/api/permissions**",
+          "/api/permissions/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "system.archiveduser",
+        "type": "menu:dashboard",
+        "name": "归档用户",
+        "expression": "state:dashboard.archiveduser.list",
+        "patterns": [
+          "/api/archivedusers**",
+          "/api/archivedusers/**"
         ],
         "metadata": {
           "icon": ""
@@ -200,23 +353,64 @@
       },
       {
         "code": "system.sms",
-        "type": "menu",
+        "type": "menu:dashboard",
         "name": "短信发送记录",
-        "expression": "dashboard.sms.list",
+        "expression": "state:dashboard.smsHistory.list",
         "patterns": [
-          "/api/system/sms**"
+          "/api/smsHistories**",
+          "/api/smsHistories/**"
         ],
         "metadata": {
           "icon": ""
         }
       },
       {
-        "code": "system.audit",
-        "type": "menu",
+        "code": "system.auditEvent",
+        "type": "menu:dashboard",
         "name": "操作审计",
-        "expression": "dashboard.audit.list",
+        "expression": "state:dashboard.audit.list",
         "patterns": [
-          "/api/system/audits**"
+          "/api/auditEvents**",
+          "/api/auditEvents/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "system.authEvent",
+        "type": "menu:dashboard",
+        "name": "登录审计",
+        "expression": "state:dashboard.authLog.list",
+        "patterns": [
+          "/api/authEvents**",
+          "/api/authEvents/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "system.auditReport",
+        "type": "menu:auditReport",
+        "name": "审计报表",
+        "expression": "state:dashboard.auditReport.list",
+        "patterns": [
+          "/api/auditReports**",
+          "/api/auditReports/**"
+        ],
+        "metadata": {
+          "icon": ""
+        }
+      },
+      {
+        "code": "system.paperLib",
+        "type": "menu:dashboard",
+        "name": "快文库",
+        "expression": "state:dashboard.paper.libList({type:'libList'})",
+        "patterns": [
+          "/api/system/papers**",
+          "/api/system/papers/**"
         ],
         "metadata": {
           "icon": ""
@@ -224,23 +418,12 @@
       },
       {
         "code": "system.setting",
-        "type": "menu",
+        "type": "menu:dashboard",
         "name": "系统设置",
-        "expression": "dashboard.settings.index",
+        "expression": "state:dashboard.systemSetting.detail",
         "patterns": [
-          "/api/system/settings**"
-        ],
-        "metadata": {
-          "icon": ""
-        }
-      },
-      {
-        "code": "system.paper",
-        "type": "menu",
-        "name": "报文库",
-        "expression": "dashboard.papers.list",
-        "patterns": [
-          "/api/system/papers**"
+          "/api/system/setting**",
+          "/api/system/setting/**"
         ],
         "metadata": {
           "icon": ""

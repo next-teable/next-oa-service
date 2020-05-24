@@ -1,7 +1,7 @@
-package in.clouthink.nextoa.dashboard.support.audit.security;
+package in.clouthink.nextoa.security.audit.security;
 
-import in.clouthink.nextoa.dashboard.support.spring.security.UserDetails;
 import in.clouthink.daas.audit.security.SecurityContext;
+import in.clouthink.nextoa.security.spring.UserDetails;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.security.core.Authentication;

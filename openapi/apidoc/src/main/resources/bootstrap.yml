@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: nextoa
+
+logging:
+  level:
+    root: ${LOG_LEVEL:INFO}
