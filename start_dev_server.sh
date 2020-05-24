@@ -1,3 +1,3 @@
 #!/bin/bash -e
-cd openapiServer
-gradle clean bootRun -PjvmArgs="-Dspring.profiles.active=dev"
+cd openapi/server
+gradle clean bootRun -Dspring.profiles.active=development
