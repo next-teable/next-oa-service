@@ -19,15 +19,15 @@ jobs:
   include:
     - stage: image
       script:
-        - docker build --no-cache -f openapi/server/docker/Dockerfile -t teable/nextoa-openapi --rm=true .
+        - docker build --no-cache -f openapi/server/docker/Dockerfile -t "$API_IMAGE_NAME" --rm=true .
         - docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
-        - docker push teable/nextoa-openapi
+        - docker push "$API_IMAGE_NAME"
         - docker logout
     - stage: apidoc
       script:
-        - docker build --no-cache -f openapi/server/apidoc/Dockerfile -t teable/nextoa-apidoc --rm=true .
+        - docker build --no-cache -f openapi/server/apidoc/Dockerfile -t "$DOC_IMAGE_NAME" --rm=true .
         - docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
-        - docker push teable/nextoa-apidoc
+        - docker push "$DOC_IMAGE_NAME"
         - docker logout
     - stage: build
       script:
