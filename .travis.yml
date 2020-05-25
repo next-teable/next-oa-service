@@ -23,7 +23,7 @@ jobs:
         - docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
         - docker push teable/nextoa-openapi
         - docker logout
-    - stage: doc
+    - stage: apidoc
       script:
         - docker build --no-cache -f openapi/server/apidoc/Dockerfile -t teable/nextoa-apidoc --rm=true .
         - docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
