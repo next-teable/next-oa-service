@@ -5,10 +5,6 @@
 * Mongodb as Database （Spring Data Mongodb)
 * Redis as Simple MQ and Token Cache (Spring Data Redis & Spring Message )
 
-And
-
-* Akka is removed from V2
-
 ## Daas Deps
 
 Daas Token as Spring Security Ext
@@ -20,14 +16,21 @@ And
 Mongodb GridFS is removed from V2
 
 
-# Dev
+# Quick Start
 
-## Quick Start
+## Dev
 
-> cd openapiServer
+> cd openapi/server
+> gradle clean bootRun -Dspring.profiles.active=development 
+
+## Prd
+
+> cd openapi/server
+> gradle clean bootRun -Dspring.profiles.active=production 
+
+## Swagger
+
+> cd openapi/apidoc
 > gradle clean bootRun
 
-
-# Prd
-
-## 
+> http://127.0.0.1:8080/docs.html
