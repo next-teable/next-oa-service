@@ -20,7 +20,7 @@ COPY openapi/apidoc/docker/container-files/docker-entrypoint.sh /
 
 RUN chmod +x /*.sh
 
-EXPOSE 8081
+EXPOSE 8080
 
 WORKDIR /
 ENTRYPOINT /docker-entrypoint.sh
