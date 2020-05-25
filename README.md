@@ -2,8 +2,8 @@
 
 ## Tech Deps
 
-* Mongodb as Database （Spring Data Mongodb)
-* Redis as Simple MQ and Token Cache (Spring Data Redis & Spring Message )
+* Mongodb as Database ( Spring Data Mongodb )
+* Redis as Simple MQ and Token Cache ( Spring Data Redis & Spring Message )
 
 ## Daas Deps
 
@@ -17,6 +17,15 @@ Mongodb GridFS is removed from V2
 
 
 # Quick Start
+
+## Before Start
+
+> Start redis & mongodb first. 
+
+```
+> cd devops/dev
+> docker-compose up -d
+```
 
 ## Dev
 
@@ -38,5 +47,7 @@ Mongodb GridFS is removed from V2
 > cd openapi/apidoc
 > gradle clean bootRun
 ```
+
+Then visit the following url in browser ( Chrome is recommended ).
 
 > http://127.0.0.1:8080/docs.html
