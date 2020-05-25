@@ -19,9 +19,9 @@ jobs:
   include:
     - stage: deploy
       script:
-        - docker build --no-cache -f gateway/src/docker/Dockerfile -t picosio/sailfish-gateway --rm=true .
+        - docker build --no-cache -f openapi/server/docker/Dockerfile -t teable/nextoa-svc --rm=true .
         - docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
-        - docker push picosio/sailfish-gateway
+        - docker push teable/nextoa-svc
         - docker logout
     - stage: build
       script:
