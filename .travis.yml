@@ -1,9 +1,34 @@
-language: java
-install: true
+language: bash
+dist: xenial
 
-os: linux
-dist: trusty
-jdk: oraclejdk8
+sudo: required
 
-script:
-  - ./gradlew build -x test
+notifications:
+  webhooks: https://hook.bearychat.com/=bwBrp/travis/93d020f67c0a20049466b93a0211692c
+
+services:
+  - docker
+
+branches:
+  only:
+    - master
+    - dev
+    - image
+
+jobs:
+  include:
+    - stage: deploy
+      script:
+        - docker build --no-cache -f gateway/src/docker/Dockerfile -t picosio/sailfish-gateway --rm=true .
+        - docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
+        - docker push picosio/sailfish-gateway
+        - docker logout
+    - stage: build
+      script:
+        - gradlew clean build -x test
+
+stages:
+  - name: build
+    if: branch = dev
+  - name: deploy
+    if: branch = image
