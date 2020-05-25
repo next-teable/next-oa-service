@@ -19,9 +19,15 @@ jobs:
   include:
     - stage: deploy
       script:
-        - docker build --no-cache -f openapi/server/docker/Dockerfile -t teable/nextoa-svc --rm=true .
+        - docker build --no-cache -f openapi/server/docker/Dockerfile -t teable/nextoa-openapi --rm=true .
         - docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
-        - docker push teable/nextoa-svc
+        - docker push teable/nextoa-openapi
+        - docker logout
+    - stage: doc
+      script:
+        - docker build --no-cache -f openapi/server/apidoc/Dockerfile -t teable/nextoa-apidoc --rm=true .
+        - docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
+        - docker push teable/nextoa-apidoc
         - docker logout
     - stage: build
       script:
@@ -32,3 +38,5 @@ stages:
     if: branch = dev
   - name: deploy
     if: branch = image
+  - name: apidoc
+    if: branch = apidoc
