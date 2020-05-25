@@ -22,7 +22,7 @@ jobs:
         - docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
         - docker build -f openapi/server/docker/Dockerfile -t "$API_IMAGE_NAME" --rm=true .
         - docker push "$API_IMAGE_NAME"
-        - docker build -f openapi/server/apidoc/Dockerfile -t "$DOC_IMAGE_NAME" --rm=true .
+        - docker build -f openapi/apidoc/docker/Dockerfile -t "$DOC_IMAGE_NAME" --rm=true .
         - docker push "$DOC_IMAGE_NAME"
         - docker logout
     - stage: build
