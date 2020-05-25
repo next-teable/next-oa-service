@@ -1,6 +1,7 @@
 # NEXT OA
 
-[![Travis Build Status](https://travis-ci.org/next-teable/next-oa-service.svg?branch=dev)](https://travis-ci.org/next-teable/next-oa-service)
+dev branch [![Travis Build Status](https://travis-ci.org/next-teable/next-oa-service.svg?branch=dev)](https://travis-ci.org/next-teable/next-oa-service)
+master branch [![Travis Build Status](https://travis-ci.org/next-teable/next-oa-service.svg?branch=master)](https://travis-ci.org/next-teable/next-oa-service)
 
 # Deps
 
