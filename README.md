@@ -41,6 +41,13 @@ Mongodb GridFS is removed from V2
 > gradle clean bootRun -Dspring.profiles.active=production 
 ```
 
+## Test
+
+```
+> cd openapi/server
+> gradle clean test
+```
+
 ## Swagger
 
 ```
