@@ -20,3 +20,14 @@ services:
     image: redis:alpine
     ports:
       - "6379:6379"
+
+  nextoa:
+    container_name: nextoa
+    image: teable/nextoa-api
+    ports:
+      - "80:80"
+    depends_on:
+      - mongodb
+      - redis
+    environment:
+      MONGODB_URI: "mongodb://mongodb:27017/nextoa"
