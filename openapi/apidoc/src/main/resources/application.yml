@@ -1,7 +1,7 @@
 in.clouthink.nextoa.security.rbac.resourceFile: resources.json
 
 server:
-  port: ${SERVER_PORT:8081}
+  port: ${SERVER_PORT:8080}
 
 spring:
   data:

@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management
+    ports:
+      - "4367:4367"
+      - "5671:5671"
+      - "5672:5672"
+      - "15672:15672"
+
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    ports:
+      - "27017:27017"
+
+  redis:
+    container_name: redis
+    image: redis:alpine
+    ports:
+      - "6379:6379"
