@@ -3,9 +3,10 @@ in.clouthink.nextoa.security.rbac:
 
 in.clouthink.nextoa:
   email:
+    enabled: ${EMAIL_ENABLED:false}
     smtp:
       host: ${EMAIL_SMTP_HOST}
-      port: ${EMAIL_SMTP_PORT}
+      port: ${EMAIL_SMTP_PORT:25}
       username: ${EMAIL_SMTP_USERNAME}
       password: ${EMAIL_SMTP_PASSWORD}
     sender:
@@ -14,6 +15,7 @@ in.clouthink.nextoa:
       shortUrl: ${SENDER_SHORT_URL}
       longUrl: ${SENDER_LONG_URL}
   sms:
+    enabled: ${SMS_ENABLED:false}
     key: ${SMS_KEY}
     secret: ${SMS_SECRET}
     templateId: ${SMS_TEMPLATEID}
