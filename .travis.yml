@@ -31,6 +31,6 @@ jobs:
 
 stages:
   - name: build
-    if: branch = dev
+    if: branch = dev OR branch = master
   - name: deploy
     if: branch = image
