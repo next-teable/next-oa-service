@@ -20,17 +20,23 @@ Mongodb GridFS is removed from V2
 
 ## Dev
 
+```
 > cd openapi/server
 > gradle clean bootRun -Dspring.profiles.active=development 
+```
 
 ## Prd
 
+```
 > cd openapi/server
 > gradle clean bootRun -Dspring.profiles.active=production 
+```
 
 ## Swagger
 
+```
 > cd openapi/apidoc
 > gradle clean bootRun
+```
 
 > http://127.0.0.1:8080/docs.html
