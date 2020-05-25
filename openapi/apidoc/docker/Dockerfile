@@ -1,4 +1,4 @@
-FROM clouthinkin/jdk8 as builder
+FROM clouthinkin/jre8 as builder
 
 LABEL maintainer="melthaw@gmail.com"
 
@@ -11,7 +11,7 @@ WORKDIR /code
 RUN cd /code && chmod +x gradlew && ./gradlew -p openapi/apidoc clean build -x test
 
 # final stage
-FROM clouthinkin/jdk8
+FROM clouthinkin/jre8
 
 LABEL maintainer="melthaw@gmail.com"
 
