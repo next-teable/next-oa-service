@@ -1,13 +1,13 @@
+# NEXT OA
+
+[![Travis Build Status](https://travis-ci.org/next-teable/next-oa-service.svg?branch=dev)](https://travis-ci.org/next-teable/next-oa-service)
+
 # Deps
 
 ## Tech Deps
 
-* Mongodb as Database （Spring Data Mongodb)
-* Redis as Simple MQ and Token Cache (Spring Data Redis & Spring Message )
-
-And
-
-* Akka is removed from V2
+* Mongodb as Database ( Spring Data Mongodb )
+* Redis as Simple MQ and Token Cache ( Spring Data Redis & Spring Message )
 
 ## Daas Deps
 
@@ -20,14 +20,45 @@ And
 Mongodb GridFS is removed from V2
 
 
-# Dev
+# Quick Start
 
-## Quick Start
+## Before Start
 
-> cd openapiServer
+> Start redis & mongodb first. 
+
+```
+> cd devops/dev
+> docker-compose up -d
+```
+
+## Dev
+
+```
+> cd openapi/server
+> gradle clean bootRun -Dspring.profiles.active=development 
+```
+
+## Prd
+
+```
+> cd openapi/server
+> gradle clean bootRun -Dspring.profiles.active=production 
+```
+
+## Test
+
+```
+> cd openapi/server
+> gradle clean test
+```
+
+## Swagger
+
+```
+> cd openapi/apidoc
 > gradle clean bootRun
+```
 
+Then visit the following url in browser ( Chrome is recommended ).
 
-# Prd
-
-## 
+> http://127.0.0.1:8080/docs.html

@@ -17,16 +17,12 @@ branches:
 
 jobs:
   include:
-    - stage: image
+    - stage: deploy
       script:
-        - docker build --no-cache -f openapi/server/docker/Dockerfile -t "$API_IMAGE_NAME" --rm=true .
         - docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
+        - docker build -f openapi/server/docker/Dockerfile -t "$API_IMAGE_NAME" --rm=true .
         - docker push "$API_IMAGE_NAME"
-        - docker logout
-    - stage: apidoc
-      script:
-        - docker build --no-cache -f openapi/server/apidoc/Dockerfile -t "$DOC_IMAGE_NAME" --rm=true .
-        - docker login --username "$DOCKER_USERNAME" --password "$DOCKER_PASSWORD"
+        - docker build -f openapi/apidoc/docker/Dockerfile -t "$DOC_IMAGE_NAME" --rm=true .
         - docker push "$DOC_IMAGE_NAME"
         - docker logout
     - stage: build
@@ -35,8 +31,6 @@ jobs:
 
 stages:
   - name: build
-    if: branch = dev
-  - name: image
+    if: branch = dev OR branch = master
+  - name: deploy
     if: branch = image
-  - name: apidoc
-    if: branch = apidoc
