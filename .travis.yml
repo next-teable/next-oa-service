@@ -31,7 +31,7 @@ jobs:
         - docker logout
     - stage: build
       script:
-        - gradlew clean build -x test
+        - ./gradlew clean build -x test
 
 stages:
   - name: build
