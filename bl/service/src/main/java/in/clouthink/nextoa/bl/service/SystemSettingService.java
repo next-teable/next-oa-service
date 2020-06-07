@@ -11,21 +11,10 @@ import java.util.List;
  */
 public interface SystemSettingService {
 
-	SystemSetting getSystemSetting();
+    SystemSetting getSystemSetting();
 
-	void updateSystemSetting(SaveSystemSettingRequest systemSetting, User byWho);
+    void updateSystemSetting(SaveSystemSettingRequest systemSetting, User byWho);
 
-	String getFullUrl(String shortUrlKey);
+    String getFullUrl(String shortUrlKey);
 
-	List<User> listProjectSupervisors();
-
-	boolean isProjectSupervisor(User user);
-
-	List<User> listCompanySupervisors();
-
-	boolean isCompanySupervisor(User user);
-
-	List<User> listBizDepartmentSupervisors();
-
-	boolean isBizDepartmentSupervisor(User user);
 }
