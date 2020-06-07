@@ -13,145 +13,59 @@ import java.util.stream.Collectors;
  */
 public class SystemSettingSummary extends AbstractBaseSummary {
 
-	public static void convert(SystemSetting fromObj, SystemSettingSummary result) {
-		BeanUtils.copyProperties(fromObj,
-								 result,
-								 "companySupervisors",
-								 "bizDepartmentSupervisors",
-								 "projectSupervisors");
-		AbstractBaseSummary.convert(fromObj, result);
-		if (fromObj.getCompanySupervisors() != null) {
-			result.setCompanySupervisors(fromObj.getCompanySupervisors()
-												.stream()
-												.map(mgr -> SimpleUser.from(mgr))
-												.collect(Collectors.toList()));
-		}
-		if (fromObj.getBizDepartmentSupervisors() != null) {
-			result.setBizDepartmentSupervisors(fromObj.getBizDepartmentSupervisors()
-													  .stream()
-													  .map(mgr -> SimpleUser.from(mgr))
-													  .collect(Collectors.toList()));
-		}
-		if (fromObj.getProjectSupervisors() != null) {
-			result.setProjectSupervisors(fromObj.getProjectSupervisors()
-												.stream()
-												.map(mgr -> SimpleUser.from(mgr))
-												.collect(Collectors.toList()));
-		}
-		if (fromObj.getProfitSupervisors() != null) {
-			result.setProfitSupervisors(fromObj.getProfitSupervisors()
-											   .stream()
-											   .map(mgr -> SimpleUser.from(mgr))
-											   .collect(Collectors.toList()));
-		}
-	}
+    public static void convert(SystemSetting fromObj, SystemSettingSummary result) {
+        BeanUtils.copyProperties(fromObj, result);
+        AbstractBaseSummary.convert(fromObj, result);
 
-	public static SystemSettingSummary from(SystemSetting fromObj) {
-		if (fromObj == null) {
-			return null;
-		}
-		SystemSettingSummary result = new SystemSettingSummary();
-		convert(fromObj, result);
-		return result;
-	}
+    }
 
-	private String name;
+    public static SystemSettingSummary from(SystemSetting fromObj) {
+        if (fromObj == null) {
+            return null;
+        }
+        SystemSettingSummary result = new SystemSettingSummary();
+        convert(fromObj, result);
+        return result;
+    }
 
-	private String fileObjectId;
+    private String name;
 
-	private String contactEmail;
+    private String fileObjectId;
 
-	private String contactPhone;
+    private String contactEmail;
 
-	private List<SimpleUser> companySupervisors = new ArrayList();
+    private String contactPhone;
 
-	private List<SimpleUser> bizDepartmentSupervisors = new ArrayList();
+    public String getName() {
+        return name;
+    }
 
-	private List<SimpleUser> projectSupervisors = new ArrayList();
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	private List<SimpleUser> profitSupervisors = new ArrayList();
+    public String getFileObjectId() {
+        return fileObjectId;
+    }
 
-	private String profitAccountSubjectName;
+    public void setFileObjectId(String fileObjectId) {
+        this.fileObjectId = fileObjectId;
+    }
 
-	private String outsourceAccountSubjectName;
+    public String getContactEmail() {
+        return contactEmail;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public void setContactEmail(String contactEmail) {
+        this.contactEmail = contactEmail;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getContactPhone() {
+        return contactPhone;
+    }
 
-	public String getFileObjectId() {
-		return fileObjectId;
-	}
+    public void setContactPhone(String contactPhone) {
+        this.contactPhone = contactPhone;
+    }
 
-	public void setFileObjectId(String fileObjectId) {
-		this.fileObjectId = fileObjectId;
-	}
-
-	public String getContactEmail() {
-		return contactEmail;
-	}
-
-	public void setContactEmail(String contactEmail) {
-		this.contactEmail = contactEmail;
-	}
-
-	public String getContactPhone() {
-		return contactPhone;
-	}
-
-	public void setContactPhone(String contactPhone) {
-		this.contactPhone = contactPhone;
-	}
-
-	public List<SimpleUser> getCompanySupervisors() {
-		return companySupervisors;
-	}
-
-	public void setCompanySupervisors(List<SimpleUser> companySupervisors) {
-		this.companySupervisors = companySupervisors;
-	}
-
-	public List<SimpleUser> getBizDepartmentSupervisors() {
-		return bizDepartmentSupervisors;
-	}
-
-	public void setBizDepartmentSupervisors(List<SimpleUser> bizDepartmentSupervisors) {
-		this.bizDepartmentSupervisors = bizDepartmentSupervisors;
-	}
-
-	public List<SimpleUser> getProjectSupervisors() {
-		return projectSupervisors;
-	}
-
-	public void setProjectSupervisors(List<SimpleUser> projectSupervisors) {
-		this.projectSupervisors = projectSupervisors;
-	}
-
-	public List<SimpleUser> getProfitSupervisors() {
-		return profitSupervisors;
-	}
-
-	public void setProfitSupervisors(List<SimpleUser> profitSupervisors) {
-		this.profitSupervisors = profitSupervisors;
-	}
-
-	public String getProfitAccountSubjectName() {
-		return profitAccountSubjectName;
-	}
-
-	public void setProfitAccountSubjectName(String profitAccountSubjectName) {
-		this.profitAccountSubjectName = profitAccountSubjectName;
-	}
-
-	public String getOutsourceAccountSubjectName() {
-		return outsourceAccountSubjectName;
-	}
-
-	public void setOutsourceAccountSubjectName(String outsourceAccountSubjectName) {
-		this.outsourceAccountSubjectName = outsourceAccountSubjectName;
-	}
 }

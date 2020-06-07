@@ -9,6 +9,7 @@ import in.clouthink.nextoa.bl.service.SystemSettingService;
 import in.clouthink.nextoa.event.support.EmailService;
 import in.clouthink.nextoa.event.support.email.SenderOptions;
 import in.clouthink.nextoa.shared.util.ShortenUrlUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,7 +50,7 @@ public class EmailServiceImpl implements EmailService {
 
         String appName = "NEXTOA办公网";
         SystemSetting systemSetting = systemSettingService.getSystemSetting();
-        if (systemSetting != null) {
+        if (systemSetting != null && StringUtils.isNotBlank(systemSetting.getName())) {
             appName = systemSetting.getName();
         }
 

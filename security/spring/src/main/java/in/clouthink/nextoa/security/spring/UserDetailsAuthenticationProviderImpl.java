@@ -9,6 +9,7 @@ import org.springframework.security.authentication.dao.AbstractUserDetailsAuthen
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.crypto.password.StandardPasswordEncoder;
 import org.springframework.util.Assert;
@@ -16,7 +17,7 @@ import org.springframework.util.Assert;
 public class UserDetailsAuthenticationProviderImpl extends AbstractUserDetailsAuthenticationProvider {
 
 	// FIXME move the key to configurable place
-	private PasswordEncoder passwordEncoder = new StandardPasswordEncoder("nextoa2016@istarest.com.cn");
+	private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
 	@Autowired
 	private UserDetailsService userDetailsService;

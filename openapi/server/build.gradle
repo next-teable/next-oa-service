@@ -18,7 +18,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-data-redis'
     compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
     compile 'org.springframework.boot:spring-boot-starter-security'
-    compile "org.springframework.boot:spring-boot-starter-actuator"
+//    compile "org.springframework.boot:spring-boot-starter-actuator"
 
     compile project(':shared')
     compile project(':bl:model')
