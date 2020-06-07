@@ -1,4 +1,4 @@
-in.clouthink.nextoa.dashboard.administrator:
+in.clouthink.nextoa.startup.administrator:
   email: ${ADMIN_EMAIL:admin@clouthink.in}
   username: ${ADMIN_USERNAME:administrator}
   cellphone: ${ADMIN_MOBILE:13000000000}
