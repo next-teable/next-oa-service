@@ -18,7 +18,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import org.springframework.scheduling.annotation.EnableAsync;
 
 @SpringBootApplication
-@ComponentScan({"in.clouthink.nextoa.bl", "in.clouthink.daas.fss"})
+@ComponentScan({"in.clouthink.nextoa.bl", "in.clouthink.daas.fss", "in.clouthink.nextoa.security"})
 @EnableMongoRepositories({"in.clouthink.nextoa.security.audit.repository",
         "in.clouthink.nextoa.security.auth.repository"})
 @Import({OpenApiSecurityConfigurer.class, OpenApiWebMvcConfigurer.class})
